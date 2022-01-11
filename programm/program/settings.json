@@ -1,0 +1,8 @@
+{
+  "C_Cpp.errorSquiggles": "Disabled",
+  "code-runner.fileDirectoryAsCwd": true,
+  "files.associations": {
+    "stdio.h": "c",
+    "iostream": "cpp"
+  }
+}

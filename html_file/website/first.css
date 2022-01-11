@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  margin: 0px;
+  height: 160vh;
+  /* background-image: url("https://source.unsplash.com/user/erondu/1600x900"); */
+  /* background-repeat: no-repeat; */
+  background-color: white;
+
+  z-index: -1;
+}
+
+.head {
+  left: 6opp0px;
+  right: 60px;
+
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  background-color: crimson;
+  z-index: -2;
+  padding: 20px;
+}
+.head:hover {
+  flex-wrap: 20px;
+  background-color: rgb(223, 153, 153);
+}
+
+#logo {
+  margin: 5px;
+  height: 30px;
+}
+#logo:hover {
+  height: 35px;
+}
+.menu {
+  display: flex;
+  border-radius: 5px;
+  margin: 5px auto;
+  text-align: center;
+}
+.menu li {
+  list-style: none;
+}
+.menu li a {
+  color: whitesmoke;
+  margin: 0px 15px;
+  padding: 5px 5px;
+  display: flex;
+
+  text-decoration: none;
+}
+.menu li a:hover {
+  color: red;
+  background-color: black;
+  border-radius: 15px;
+  font-size: 20px;
+}
+
+.search {
+  position: absolute;
+  top: 5px;
+  right: 12px;
+  margin: 20px;
+}
+.search input {
+  color: black;
+  padding: 5px;
+}
+
+button {
+  padding: 5px;
+}
+h1:hover {
+  text-transform: uppercase;
+  color: red;
+  font-size: 50px;
+  text-shadow: 2px 4px black;
+}
+h1 {
+  text-align: center;
+  margin-top: 100px;
+  margin-left: 25px;
+  margin-bottom: 75px;
+  color: black;
+}
+h1::before {
+  background-color: darkmagenta;
+}
+/* .text1::after:hover {
+  background-color: rgb(51, 13, 51);
+} */
+.orange {
+  background-color: orange;
+  padding-bottom: 50px;
+}
+.white img {
+  width: 50px;
+  height: 50px;
+  align-content: center;
+  margin: auto;
+}
+.green {
+  background-color: green;
+  padding-bottom: 50px;
+  margin: 50px 0px;
+}

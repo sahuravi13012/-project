@@ -1,0 +1,71 @@
+<html>
+
+<head>
+  <style>
+    * {
+      box-sizing: 1000%;
+    }
+
+    .container {
+      width: 1000px;
+      height: 800px;
+      background-color: #74cbf498;
+      border: 2px solid rgba(0, 0, 0, 0.137);
+      display: inline-block;
+      margin: 25px auto;
+      padding: 25px auto;
+      font-size: 25px;
+    }
+
+    .container form {
+      margin: 20px;
+    }
+
+    #reg {
+      text-align: center;
+    }
+
+    .reg1,
+    .reg2 {
+      height: 25px;
+      margin-left: 40px;
+    }
+
+    .reg3 {
+      margin-left: 102px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <form action=" ">
+      <h1 id="reg">Registration Form</h1>
+      <div>First Name: <input type="name" name="name" class="reg1" /></div>
+      <br />
+      <div>Last Name: <input type="name" name="name" class="reg2" /></div>
+      <br />
+      <div>DOB:<input type="date" name="birthday" placeholder="" class="reg3" /></div>
+      <br />
+      <div>Mobile Number: <input type="number" class="number" /></div>
+      <br />
+      <div>Gender :
+        Male<input type="radio" name="gender" value="male" class="reg4">
+        Female<input type="radio" name="gender" value="female" class="reg5">
+        Other<input type="radio" name="gender" value="other" class="reg6">
+      </div>
+      <br>
+      <label for="Address"> Address </label>
+      <div>
+        <textarea name="Address" cols="30" rows="10"></textarea>
+      </div>
+      <div>
+        <input type="submit" value="submit now" />
+      </div>
+    </form>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+
+        }
+
+        .container {
+            width: 200vh;
+            display: flex;
+            border: 2px solid rgba(0, 0, 0, 0.623);
+            background-color: rgba(255, 255, 255, 0.76);
+            position: relative;
+        }
+
+        .coloum {
+            position: relative;
+            height: 500px;
+            width: 200px;
+            margin: 2px 2px;
+            box-shadow: 1px 1px;
+            background: #f05642;
+        }
+
+
+
+
+        #logo {
+            width: 60px;
+            height: 60px;
+            border-radius: 3px;
+            margin: 3px;
+        }
+
+        .list li {
+            font-weight: bolder;
+            font-family: sans-serif;
+            list-style: none;
+            margin-top: 10px;
+            padding: 10px;
+
+        }
+
+        .list li:hover {
+            background-color: rgb(184, 159, 159);
+        }
+
+        .active {
+            background-color: rgba(0, 0, 255, 0.219);
+        }
+
+        .box {
+            display: flex;
+            list-style: none;
+            width: 1030px;
+            height: 100px;
+            margin-top: 4px;
+            margin-left: 10px;
+            background-color: rgba(0, 0, 0, 0.198);
+            box-shadow: 1px 1px 1px 1px;
+
+        }
+
+        .sec1 {
+            position: relative;
+            width: 190px;
+            height: 70px;
+            /* border-radius: 30px; */
+            background-color: rgba(233, 221, 221, 0.233);
+            margin-left: 30px;
+            margin-top: 15px;
+            position: relative;
+            background-repeat: no-repeat;
+            background-size: 40px;
+            align-items: center;
+            box-shadow: 1px 2px 1px 2px;
+
+        }
+
+        .sec1:hover {
+            /* background-color: rgba(241, 236, 229, 0.63); */
+
+            transform: scale(1.2);
+        }
+
+        #text {
+            color: black;
+            margin-right: 10px;
+            margin-top: 10px;
+            /* margin-bottom: 15px; */
+            text-align: right;
+        }
+
+        #icon {
+            position: absolute;
+            width: 30px;
+            height: 35px;
+            margin-top: 15px;
+            margin-left: 15px;
+
+        }
+
+        .sec2 {
+            width: 200px;
+            height: 70px;
+            /* border-radius: 30px; */
+            background-color: rgba(233, 221, 221, 0.233);
+            margin-left: 100px;
+            margin-top: 15px;
+            box-shadow: 1px 2px 1px 2px;
+        }
+
+        #text2 {
+            color: black;
+            margin-right: 15px;
+            margin-top: 10px;
+            text-align: right;
+
+        }
+
+        .sec2:hover {
+            /* background-color: rgba(241, 236, 229, 0.63); */
+            transform: scale(1.2);
+
+
+        }
+
+        .sec3 {
+            position: relative;
+            margin-left: 300px;
+            border-radius: 30px;
+            background-color: rgba(0, 0, 0, 0.233);
+            /* margin-left: 100px; */
+            margin-top: 15px;
+        }
+
+        .btn {
+            /* background-color: blue; */
+            position: absolute;
+            background: #6495ED;
+            background-size: cover;
+            width: 30px;
+            height: 30px;
+            margin-top: 25px;
+            margin-left: 50px;
+
+        }
+
+        #fa {
+            color: white;
+            font-size: 22px;
+
+
+        }
+
+        .search {
+            position: relative;
+            width: 50%;
+            height: 90%;
+            margin-top: 25px;
+            margin-left: 50px;
+        }
+
+        .box2 {
+            display: block;
+            position: absolute;
+            list-style: none;
+            width: 500px;
+            height: 379px;
+            margin-top: 110px;
+            margin-right: 200px;
+
+            background-color: rgba(0, 0, 0, 0.198);
+            box-shadow: 2px 2px 2px 2px;
+
+        }
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+            font-size: 20px;
+            background-color: rgba(233, 221, 221, 0);
+
+        }
+
+        td,
+        th {
+            border: 1px solid black;
+            text-align: left;
+            padding: 8px;
+        }
+
+        /* tr:nth-child(even) {
+            background-color: #dddddd;
+        } */
+
+        .box3 {
+
+            display: block;
+            position: absolute;
+            list-style: none;
+            width: 520px;
+            height: 220px;
+            margin-top: 115px;
+            margin-left: 725px;
+            justify-content: right;
+            background-color: rgba(0, 0, 0, 0.198);
+
+            box-shadow: 1px 1px 1px 1px;
+
+        }
+
+        .box4 {
+
+            display: block;
+            position: absolute;
+            list-style: none;
+            width: 520px;
+            height: 142px;
+            margin-top: 350px;
+            margin-left: 725px;
+            background-color: rgba(0, 0, 0, 0.198);
+
+            box-shadow: 1px 1px 1px 1px;
+
+        }
+
+        .year {
+            color: blanchedalmond;
+
+            width: 250px;
+            height: 20px;
+            margin-left: 40px;
+            background-color: rgba(0, 0, 0, 0.198);
+
+        }
+
+        .p {
+            width: 200px;
+            background-color: rgba(0, 0, 0, 0.397);
+            border-radius: 0px 10px 10px 0px;
+        }
+
+        .pe {
+            width: 150px;
+            background-color: rgba(0, 0, 0, 0.445);
+            border-radius: 0px 10px 10px 0px;
+
+        }
+
+        .per {
+
+            width: 180px;
+            background-color: rgba(0, 0, 0, 0.493);
+            border-radius: 0px 10px 10px 0px;
+        }
+
+        .perf {
+            width: 185px;
+            px;
+            background-color: rgba(0, 0, 0, 0.445);
+            border-radius: 0px 10px 10px 0px;
+
+        }
+
+        .kil {
+            color: black;
+            font-weight: bold;
+            position: relative;
+            margin-left: 5px;
+            margin-top: 5px;
+        }
+
+        #heading {
+            text-align: center;
+            font-size: 25px
+        }
+
+        .rank {
+            text-align: center;
+            margin-top: 25px;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="coloum">
+
+            <img src="school logo.jpg" alt="" id="logo">
+
+            <div class="list">
+                <li class="active">HOME</li>
+                <li>HOME
+                </li>
+                <li>HOME</li>
+                <li>HOME</li>
+                <li>HOME</li>
+                <li>HOME</li>
+                <li>HOME</li>
+            </div>
+
+
+        </div>
+        <ul class="box">
+            <li class="sec1">
+                <img src="icon.png" alt="" id="icon">
+                <h3 id="text">Total student<br>2000</h3>
+
+            </li>
+
+            <li class="sec2">
+                <img src="teachers.png" alt="" id="icon">
+                <h3 id="text2">Total faculties<br>2000</h3>
+            </li>
+            <div class="box2">
+                <h2 style="text-align:center">LAST YEAR RESULT</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Class</th>
+                            <th>Perfomance</th>
+                        </tr>
+
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Manoj</td>
+                            <td>12th</td>
+                            <td>80%</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Himanshu</td>
+                            <td>12th</td>
+                            <td>65%</td>
+                        </tr>
+
+
+
+                        <tr>
+                            <td>Jagdish</td>
+                            <td>12th</td>
+                            <td>50%</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Ram</td>
+                            <td>12th</td>
+                            <td>90%</td>
+                        </tr>
+                        <tr>
+                            <td>Suhani</td>
+                            <td>12th</td>
+                            <td>80%</td>
+                        </tr>
+                        <tr>
+                            <td>Anjali</td>
+                            <td>12th</td>
+                            <td>80%</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+
+        </ul>
+
+        <div class="box3">
+            <h4 id="heading">Last four year school Perfomance</h4>
+            <div class="kil">
+
+                <p>2016</p>
+
+                <div class="year">
+                    <div class="p">
+                        90%
+                    </div>
+                </div>
+            </div>
+
+            <div class="kil">
+
+                <p>2017</p>
+
+                <div class="year">
+                    <div class="pe">
+                        70%
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="kil">
+
+                <p>2018</p>
+
+                <div class="year">
+                    <div class="per">
+                        85%
+                    </div>
+                </div>
+            </div>
+
+            <div class="kil">
+
+                <p>2019</p>
+
+                <div class="year">
+                    <div class="perf">
+                        87%
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+
+
+        <div class="box4">
+            <div class="rank">
+                <h2>
+                    Rank of school<br>3rd position
+                </h2>
+            </div>
+
+        </div>
+    </div>
+
+
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>

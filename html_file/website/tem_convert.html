@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: inline-block;
+            background-color: rgba(0, 0, 0, 0.856);
+            border-radius: 10px;
+            width: 600px;
+            height: 250px;
+            text-align: center;
+            margin-left: 340px;
+            margin-top: 100px;
+
+
+        }
+
+        h2 {
+            text-align: center;
+            color: wheat;
+        }
+
+        .input {
+            display: inline-block;
+            margin: 20px;
+            color: white;
+             
+        }
+
+        label {
+            font-size: 20px;
+            font-weight: bolder;
+            margin-bottom: 5px;
+            color: white;
+
+        }
+
+        .inp {
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 15px;
+            font-weight: bold;
+            background: rgba(255, 255, 255, 0.397);
+            color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2> Temprature converter </h2>
+        <div class="input">
+            <label>Celcius</label><br>
+            <input type="number" value="0" id="ce" class="inp">
+        </div>
+
+        <div class="input">
+            <label>Fahrenheit</label><br>
+            <input type="number" value="32" id="fa" class="inp">
+        </div>
+        <div class="clear">
+            <button id="btn">clear input field</button>
+        </div>
+    </div>
+</body>
+<script>
+    let Celcius = document.getElementById("ce");
+    let Fahrenheit = document.getElementById("fa")
+    Celcius.addEventListener('input', function () {
+        let c = this.value;
+        let f = (c * 9 / 5) + 32;
+        if (!Number.isInteger(f)) {
+            f = f.toFixed(4);
+        }
+        Fahrenheit.value = f;
+    });
+
+    Fahrenheit.addEventListener('input', function () {
+        let f = this.value;
+        let c = (f - 32) + 5 / 9;
+        if (!Number.isInteger(c)) {
+            c = c.toFixed(4);
+        }
+        Fahrenheit.value = f;
+        Celcius.value = c;
+    });
+
+    let btn = document.getElementById("btn");
+
+
+
+    btn.addEventListener('click', function (input) {
+        document.getElementById('ce').value = "";
+        document.getElementById('fa').value = "";
+
+    });
+
+</script>
+
+</html>3
